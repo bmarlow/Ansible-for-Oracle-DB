@@ -16,6 +16,8 @@ The user creation below is so that the oracle_user module can be used for changi
 
 ### Unzip and install Instant client (must be downloaded prior from oracle)
     unzip instantclient-basic-linux.x64-18.3.0.0.0dbru.zip
+    
+    mv instantclient_18_3/ /opt/oracle/
 
 ### Update instant client conf
     echo /opt/oracle/instantclient_18_3 > /etc/ld.so.conf.d/oracle-instantclient.conf
