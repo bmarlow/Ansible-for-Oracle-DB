@@ -1,0 +1,21 @@
+---
+
+- name: Unlock accounts
+  hosts: all
+  tasks:
+  - name: Unlock account that may have gotten locked
+    oracle_user:
+      #optional default value shown
+      #hostname: localhost
+      #optional default value shown
+      #port: 1521
+      user: "{{ oracle_dba_username }}"
+      password: "{{oracle_dba_password }}"
+      #must be sysdba to change passwords
+      mode: sysdba
+      #service_name == database_name
+      service_name: "{{ oracle_service_name }}"
+      #schema == DB user
+      schema: "{{ oracle_schema_name }}"
+      state: unlocked
+    
