@@ -5,10 +5,6 @@
   tasks:
   - name: Unlock account that may have gotten locked
     oracle_user:
-      #optional default value shown
-      #hostname: localhost
-      #optional default value shown
-      #port: 1521
       user: "{{ oracle_dba_username }}"
       password: "{{oracle_dba_password }}"
       #must be sysdba to change passwords
